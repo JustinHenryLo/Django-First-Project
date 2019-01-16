@@ -49,3 +49,6 @@ q=Question.objects.get(id=1)
 q.property="blabla"
 q.save()
 """
+
+#q = Questions.objects.get(id=1)
+#q.choice_set.all() ==== all choices in q (inner join)....choice_set is standard
