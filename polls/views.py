@@ -21,7 +21,8 @@ def detail(request, question_id):
 
 def update(request,question_id):
     if(request.method == 'POST'):
-        pass
+        form = request.POST['form']
+        form.
     else:
         question = Question.objects.get(id = question_id)
         context = {}
