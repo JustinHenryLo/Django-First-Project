@@ -1,0 +1,1 @@
+# to make app use python3 manage.py startapp name
