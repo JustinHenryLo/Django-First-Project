@@ -9,7 +9,7 @@
         {% for question in questions %}
         <li>
             Question: {{ question.question_text }}<br/>
-            Date Published: {{ question.question_pub }}<br/>
+            Date Published: {{ question.pub_date }}<br/>
             {% for choice in question.choice_set.all %}
             <a href="{% url 'polls:detail' question.id %}">{{choice.choice_text}}</a> <!--{ % url name_link exrtra_params % }-->
             {{ choice.votes }}<br/>

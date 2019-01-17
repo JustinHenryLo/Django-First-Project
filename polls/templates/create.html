@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    this is create page
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'polls:createQuestion' %}" method="POST"> <!--obj instance id-->
+    {% csrf_token %}
+    <table>{{ form.as_table }}</table>
+    {{ field.errors }}
+    <input type="submit" value="Create Question">
+</form>
+    
+
+{% endblock %}

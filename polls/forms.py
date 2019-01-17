@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Question
+from .models import Question,Choice
 #template forms from models
 class QuestionModelForm(ModelForm):#convetion is model..modelform
     class Meta:#inner class of model form class
@@ -8,5 +8,9 @@ class QuestionModelForm(ModelForm):#convetion is model..modelform
         #include = ['question_text']<includes only question_text
         #exclude =['id']<all but id
         exclude = ['id']
-
 # to be imported in views
+
+class ChoiceModelForm(ModelForm):
+    class Meta:
+        model = Choice
+        exclude = ['id']
