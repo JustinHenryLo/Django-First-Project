@@ -1,0 +1,47 @@
+reset ang proxy net
+
+make app
+add app to settings
+make urls
+	> add app_name="app" in urls.py
+	> add "name" in urls
+include app urls in main urls
+make models(in singular form, _case, capital letter start, no need primary key,
+	>make  def __str__(self):(needed)
+run make migrations command
+run migrate migrations
+add models to admin.py in app(register)(displays models in admin site)
+================
+templates:
+make folder "templates" in app
+make base.html in templates (add {% load static %} to load static files, js should be loaded last)
+so u can now extend from base, make index.html {% extends 'base.html'%}
+================
+views:(where templates are rendered)
+*assumes there is model & migrations*
+	>in views.py,1st arg must be request
+	>must always return something
+> add views in urls
+================
+forms:
+make forms.py
+import ModelForm
+import models
+make model form<CLASSNAMEModelForm(ModelForm):
+			class Meta:
+				model = Question
+				exclude/include/fields =[]
+import them in views
+===============
+make static folder in app
+make folder named applicationname "polls"
+add all js css etc in polls
+(how to call static tag)
+{% static 'polls/materialize/css/materialize.css' %}
+
+
+
+
+
+
+
